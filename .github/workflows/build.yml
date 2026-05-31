@@ -26,10 +26,10 @@ jobs:
           cd $GITHUB_WORKSPACE
           FINALPACKAGE=1 gmake clean package
           mkdir -p framework_package
-          cp -r .theos/obj/*.framework framework_package/
+          cp -r .theos/obj/debug/arm64e/*.dylib ./
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: MuffinStore Framework
-          path: framework_package/*.framework
+          path: ./*.dylib
