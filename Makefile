@@ -12,5 +12,6 @@ libmuffinstore_FILES = $(wildcard *.m)
 libmuffinstore_FRAMEWORKS = UIKit CoreGraphics CoreServices SystemConfiguration
 libmuffinstore_PRIVATE_FRAMEWORKS = Preferences StoreKitUI
 libmuffinstore_CFLAGS = -fobjc-arc
+libmuffinstore_INSTALL_PATH = @rpath
 
 include $(THEOS_MAKE_PATH)/library.mk
